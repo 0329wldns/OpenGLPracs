@@ -24,8 +24,7 @@ int main()
 	if (!glfwInit()) 
 	{
 		std::cerr << "GLFW 초기화 실패!" << std::endl;
-		return
-			-1;
+		return -1;
 	}
 
 	//--- OpenGL 버전 설정(예: 3.3 Core Profile)
