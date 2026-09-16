@@ -171,25 +171,41 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 		case GLFW_KEY_1:
 			if (rects[0].size() < 5)
 			{
-				rects[0].push_back(Rect(0.5f, 0.5f, 1.0f - (rects[0].size() + 1) * 0.1f, 1.0f - (rects[0].size() + 1) * 0.1f));
+				Rect r{};
+				if (rects[0].size()) r = Rect(0.5f, 0.5f, rects[0][rects[0].size() - 1].width * 0.9f, rects[0][rects[0].size() - 1].height * 0.9f);
+				else r = Rect(0.5f, 0.5f, 0.9f, 0.9f);
+
+				rects[0].push_back(r);
 			}
 			break;
 		case GLFW_KEY_2:
 			if (rects[1].size() < 5)
 			{
-				rects[1].push_back(Rect(-0.5f, 0.5f, 1.0f - (rects[1].size() + 1) * 0.1f, 1.0f - (rects[1].size() + 1) * 0.1f));
+				Rect r{};
+				if (rects[1].size()) r = Rect(-0.5f, 0.5f, rects[1][rects[1].size() - 1].width * 0.9f, rects[1][rects[1].size() - 1].height * 0.9f);
+				else r = Rect(-0.5f, 0.5f, 0.9f, 0.9f);
+
+				rects[1].push_back(r);
 			}
 			break;
 		case GLFW_KEY_3:
 			if (rects[2].size() < 5)
 			{
-				rects[2].push_back(Rect(-0.5f, -0.5f, 1.0f - (rects[2].size() + 1) * 0.1f, 1.0f - (rects[2].size() + 1) * 0.1f));
+				Rect r{};
+				if (rects[2].size()) r = Rect(-0.5f, -0.5f, rects[2][rects[2].size() - 1].width * 0.9f, rects[2][rects[2].size() - 1].height * 0.9f);
+				else r = Rect(-0.5f, -0.5f, 0.9f, 0.9f);
+
+				rects[2].push_back(r);
 			}
 			break;
 		case GLFW_KEY_4:
 			if (rects[3].size() < 5)
 			{
-				rects[3].push_back(Rect(0.5f, -0.5f, 1.0f - (rects[3].size() + 1) * 0.1f, 1.0f - (rects[3].size() + 1) * 0.1f));
+				Rect r{};
+				if (rects[3].size()) r = Rect(0.5f, -0.5f, rects[3][rects[3].size() - 1].width * 0.9f, rects[3][rects[3].size() - 1].height * 0.9f);
+				else r = Rect(0.5f, -0.5f, 0.9f, 0.9f);
+
+				rects[3].push_back(r);
 			}
 			break;
 		case GLFW_KEY_EQUAL:

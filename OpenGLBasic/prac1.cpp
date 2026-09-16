@@ -37,12 +37,9 @@ int main()
 	
 	if (!window) 
 	{
-		std::cerr <<
-			"윈도우 생성 실패!" << std::endl
-			;
+		std::cerr << "윈도우 생성 실패!" << std::endl;
 		glfwTerminate();
-		return
-			-1;
+		return -1;
 	}
 
 	//--- 컨텍스트 설정
